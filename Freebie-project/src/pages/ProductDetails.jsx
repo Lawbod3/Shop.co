@@ -1,7 +1,12 @@
 import React from "react";
+import ProductDetailsNavBar from "../components/ProductDetails-components/ProductDetails HeroPage/NavBar";
 
 const ProductDetails = () => {
-  return <div>ProductDetails</div>;
+  return (
+    <section>
+      <ProductDetailsNavBar />
+    </section>
+  );
 };
 
 export default ProductDetails;

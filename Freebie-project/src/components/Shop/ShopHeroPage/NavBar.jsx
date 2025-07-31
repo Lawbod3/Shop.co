@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import { FaUser, FaHeart, FaShoppingCart, FaSearch } from "react-icons/fa";
 
-const NavBar = () => {
+const ShopNavBar = () => {
   return (
     <nav className="bg-white shadow-sm px-8 py-4 flex items-center justify-between">
       <div className="text-2xl font-bold ">
@@ -10,17 +10,17 @@ const NavBar = () => {
 
       <div className="space-x-6  md:flex px-5 ">
         <Link to="/" className="text-grey-700 hover:text-black-700">
-          Shop
+          Home
         </Link>
-        <Link to="/sale" className="text-grey-700 hover:text-black-700">
-          On-Sale
-        </Link>
-        <Link to="/new" className="text-grey-700 hover:text-black-700">
-          New-Arrivals
-        </Link>
-        <Link to="/brands" className="text-grey-700 hover:text-700">
+        <a href="#" className="text-grey-700 hover:text-black-700">
+          SignUp
+        </a>
+        <a href="#" className="text-grey-700 hover:text-black-700">
+          Login
+        </a>
+        <a href="#shopbrands" className="text-grey-700 hover:text-700">
           Brands
-        </Link>
+        </a>
       </div>
 
       <div className="flex-1 mx-4">
@@ -52,4 +52,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default ShopNavBar;

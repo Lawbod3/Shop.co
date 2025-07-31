@@ -1,7 +1,7 @@
-import style1 from "../../assets/style1.png";
-import style2 from "../../assets/style2.png";
-import style3 from "../../assets/style3.png";
-import gym from "../../assets/gym.png";
+import style1 from "../../../assets/style1.png";
+import style2 from "../../../assets/style2.png";
+import style3 from "../../../assets/style3.png";
+import gym from "../../../assets/gym.png";
 
 export const styles = [
   {

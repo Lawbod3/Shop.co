@@ -2,13 +2,15 @@ import { Link } from "react-router";
 
 const ProductCard = ({ product }) => {
   return (
-    <div className="bg-[#f6f6f6] rounded-xl overflow-hidden shadow-sm">
+    <div className="bg-[#f6f6f6] rounded-xl overflow-hidden shadow-sm cursor-pointer">
       <div className="bg-white p-4">
-        <img
-          src={product.image}
-          alt={product.title}
-          className="w-full h-[250px] object-contain "
-        />
+        <Link to={"/product/${product.id}"}>
+          <img
+            src={product.image}
+            alt={product.title}
+            className="w-full h-[250px] object-contain "
+          />
+        </Link>
       </div>
 
       <div className="text-center p-4">
@@ -19,7 +21,7 @@ const ProductCard = ({ product }) => {
           {"☆".repeat(5 - Math.round(product.rating))}
         </p>
 
-        <div className="mt-2">
+        <div className="mt-2 ">
           <span className="text-xl font-bold">{product.price.toFixed(2)}</span>
           {product.oldPrice && (
             <>

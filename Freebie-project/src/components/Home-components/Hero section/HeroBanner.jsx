@@ -14,25 +14,27 @@ const HeroBanner = () => {
       className="grid grid-cols-1 md:grid-cols-2 min-h-screen"
     >
       <div className="pt-10">
-        <h1 className="text-6xl font-extrabold mt-14 px-20 leading-tight mb-2">
+        <h1 className=" text-4xl sm:text-5xl md:text-6xl font-extrabold mt-14 px-4 sm:px-8  md:px-20 leading-tight mb-2">
           FIND CLOTHES <br />
           THAT MATCHES <br />
           YOUR STYLE
         </h1>
-        <h6 className="px-20 text-sm text-gray-500 my-5 ">
+        <h6 className="px-4 sm:px-8 md:px-20 text-sm text-gray-500 my-5 ">
           Browse through our diverse range of meticulously crafted garments,
           designed <br />
           to bring out individuality and cater to your sense of style.
         </h6>
         <div
-          className="px-20 py-2
+          className="px-4 sm:px-8 md:px-20 py-2
         mt-2 mb-4"
         >
-          <button className="bg-black text-white text-lg hover:bg-stone-700 py-4 px-12 rounded-full mb-2">
-            Shop Now
-          </button>
+          <Link to="/Shop">
+            <button className="bg-black text-white text-lg hover:bg-stone-700 py-4 px-12 rounded-full mb-2">
+              Shop Now
+            </button>
+          </Link>
         </div>
-        <div className="grid grid-cols-3 gap-8  px-20 mt-12">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8  px-4 sm:px-8 md:px-20 mt-12">
           {counters.map((counter, index) => (
             <div key={index} className="flex flex-col ">
               <p className="text-3xl  font-bold text-stone-800 ">
@@ -46,9 +48,9 @@ const HeroBanner = () => {
           ))}
         </div>
       </div>
-      <div className="relative w-full h-full">
+      <div className="relative w-full h-96 md:h-[95vh]">
         <img
-          className="absolute bottom-0 right-0 object-cover  w-full h-[95vh] "
+          className="absolute  object-cover h-full  w-full "
           src="/pics1.png "
           alt=""
         />
