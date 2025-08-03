@@ -10,17 +10,7 @@ const TopSelling = () => {
       try {
         const loadProducts = await fetchClothProducts();
 
-        const update = loadProducts.map((item) => ({
-          id: item.id,
-          title: item.title,
-          image: item.images?.[0],
-          price: item.price,
-          oldPrice: item.price - (item.price * 20) / 100,
-          category: item.category,
-          rating: item.rating,
-          discount: 20,
-        }));
-        setProducts(update);
+        setProducts(loadProducts);
       } catch (error) {
         console.error("Failed to fetch products:", error);
       }
